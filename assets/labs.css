@@ -217,7 +217,6 @@ footer.site p + p { margin-top: 8px; }
 .hero .wrap { display: block; }
 .hero-text { max-width: 600px; }
 @media (min-width: 900px) { .hero { padding: 88px 0 96px; min-height: 620px; } }
-.hero-note { margin-top: 22px; font-size: 13px; color: var(--muted); max-width: 30em; }
 
 /* the sale's time bar, in the style of a result's color legend (Thursday to the end of Monday) */
 .legend { margin-top: 20px; }
