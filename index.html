@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; font-src 'self'; img-src 'self'; media-src 'self'; base-uri 'none'; form-action 'none'">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <title>Journey On Labs: Sketch CFD, Sketch FEA, Sketch Heat and Sketch Fields</title>
+  <meta name="description" content="Apps for iPhone and iPad for learning fluid dynamics, stress analysis, heat transfer, and electric and magnetic fields from simple sketches.">
+  <meta name="theme-color" content="#141413" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#f3f2ee" media="(prefers-color-scheme: light)">
+  <link rel="preload" href="fonts/IBMPlexSans-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="assets/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <link rel="stylesheet" href="assets/labs.css">
+  <script src="assets/labs.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to the content</a>
+  <header class="site">
+    <div class="wrap">
+      <a class="wordmark" href="./"><span class="dots" aria-hidden="true"><i class="app-cfd"></i><i class="app-fea"></i><i class="app-fields"></i><i class="app-heat"></i></span>Journey On Labs</a>
+      <nav class="site" aria-label="Main">
+        <ul>
+          <li><a href="#apps">Apps</a></li>
+          <li><a href="#verified">Verified</a></li>
+          <li data-sale><a class="hot" href="#black-friday">Black Friday</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <section class="hero" aria-labelledby="h-hero">
+      <div class="hero-sim" aria-hidden="true"><canvas id="flow" width="1200" height="640"></canvas></div>
+      <div class="wrap">
+        <div class="hero-text">
+          <p class="eyebrow">For iPhone and iPad</p>
+          <h1 id="h-hero">Learn engineering and physics from simple sketches</h1>
+          <p class="lead">Journey On Labs makes four apps: Sketch CFD, Sketch FEA, Sketch Heat and Sketch Fields. Draw a shape or a part and see the flow, the stress, the heat or the field as you draw, from a calculation checked against published benchmarks.</p>
+          <div class="actions">
+            <a class="btn sale-btn" href="#black-friday" data-sale>Black Friday: Pro at half price</a>
+            <a class="btn" href="#apps">See the apps</a>
+          </div>
+          <p class="hero-note">The flow behind this text is drawn live by this page: tracers carried past three cylinders, colored by speed. Move your pointer over it to add a fourth.</p>
+          <button type="button" class="motion" id="motion" aria-pressed="false" hidden>Pause animations</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="sale" id="black-friday" aria-labelledby="h-sale" data-sale>
+      <div class="wrap">
+        <div class="sale-card">
+          <div class="sale-head">
+            <div>
+              <p class="eyebrow">Black Friday to Cyber Monday</p>
+              <h2 id="h-sale">Pro is half price in every Sketch app</h2>
+            </div>
+            <p class="countdown"><span data-left>Until Monday, November 30</span></p>
+          </div>
+          <div class="legend" aria-hidden="true">
+            <div class="bar"><span class="now" data-now hidden></span></div>
+            <div class="ticks"><span>Thu</span><span>Fri</span><span>Sat</span><span>Sun</span><span>Mon</span></div>
+          </div>
+          <div class="codes">
+            <div class="ticket"><span class="code">BLACKFRIDAY</span><span class="what">Half off your first year</span><button type="button" class="copy" data-copy="BLACKFRIDAY" aria-label="Copy the code BLACKFRIDAY" hidden>Copy</button></div>
+            <div class="ticket"><span class="code">BLACKFRIDAYMONTHLY</span><span class="what">Half off your first 3 months</span><button type="button" class="copy" data-copy="BLACKFRIDAYMONTHLY" aria-label="Copy the code BLACKFRIDAYMONTHLY" hidden>Copy</button></div>
+          </div>
+          <p class="fine">For new subscribers and for people whose subscription or free trial has ended; not for current subscribers. The links below open the App Store with the code filled in; you can also redeem a code in the App Store or in the app, in Menu&nbsp;&gt; About. Prices differ by country.</p>
+          <ul class="deals">
+            <li class="app-cfd"><span class="who"><img src="media/cfd-icon-96.webp" width="36" height="36" alt="">Sketch CFD</span><a class="btn" href="https://apps.apple.com/redeem?ctx=offercodes&amp;id=6824528045&amp;code=BLACKFRIDAY" aria-label="Sketch CFD: half off your first year, code BLACKFRIDAY">Half off a year</a><a class="btn" href="https://apps.apple.com/redeem?ctx=offercodes&amp;id=6824528045&amp;code=BLACKFRIDAYMONTHLY" aria-label="Sketch CFD: half off your first 3 months, code BLACKFRIDAYMONTHLY">Half off 3 months</a></li>
+            <li class="app-fea"><span class="who"><img src="media/fea-icon-96.webp" width="36" height="36" alt="">Sketch FEA</span><a class="btn" href="https://apps.apple.com/redeem?ctx=offercodes&amp;id=6826964984&amp;code=BLACKFRIDAY" aria-label="Sketch FEA: half off your first year, code BLACKFRIDAY">Half off a year</a><a class="btn" href="https://apps.apple.com/redeem?ctx=offercodes&amp;id=6826964984&amp;code=BLACKFRIDAYMONTHLY" aria-label="Sketch FEA: half off your first 3 months, code BLACKFRIDAYMONTHLY">Half off 3 months</a></li>
+            <li class="app-heat"><span class="who"><img src="media/heat-icon-96.webp" width="36" height="36" alt="">Sketch Heat</span><a class="btn" href="https://apps.apple.com/redeem?ctx=offercodes&amp;id=6831361610&amp;code=BLACKFRIDAY" aria-label="Sketch Heat: half off your first year, code BLACKFRIDAY">Half off a year</a><a class="btn" href="https://apps.apple.com/redeem?ctx=offercodes&amp;id=6831361610&amp;code=BLACKFRIDAYMONTHLY" aria-label="Sketch Heat: half off your first 3 months, code BLACKFRIDAYMONTHLY">Half off 3 months</a></li>
+            <li class="app-fields"><span class="who"><img src="media/fields-icon-96.webp" width="36" height="36" alt="">Sketch Fields</span><a class="btn" href="https://apps.apple.com/redeem?ctx=offercodes&amp;id=6832425502&amp;code=BLACKFRIDAY" aria-label="Sketch Fields: half off your first year, code BLACKFRIDAY">Half off a year</a><a class="btn" href="https://apps.apple.com/redeem?ctx=offercodes&amp;id=6832425502&amp;code=BLACKFRIDAYMONTHLY" aria-label="Sketch Fields: half off your first 3 months, code BLACKFRIDAYMONTHLY">Half off 3 months</a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="apps" aria-labelledby="h-apps">
+      <div class="wrap">
+        <div class="apps-head" id="verified">
+          <p class="eyebrow">The apps</p>
+          <h2 id="h-apps">Draw it, then simulate it</h2>
+          <p>Each app computes its results from your drawing as you draw, and each is verified against published exact solutions and benchmark cases. They are simplified two-dimensional models for learning; their results are estimates.</p>
+        </div>
+
+        <article class="feature app-cfd" aria-labelledby="h-cfd">
+          <figure class="media">
+            <div class="frame"><video class="sim" muted loop playsinline preload="none" poster="media/cfd-sim-960.webp" width="960" height="640" aria-hidden="true" disablepictureinpicture disableremoteplayback><source src="media/cfd-sim-960.mp4" type="video/mp4"></video></div>
+            <figcaption>Fume hood capture, one of the built-in examples: warm air rises from a hot plate into the hood. Shown at 1.5&times; speed.</figcaption>
+          </figure>
+          <div class="copytext">
+            <div class="title"><img src="media/cfd-icon-192.webp" width="60" height="60" alt=""><div><h3 id="h-cfd">Sketch CFD</h3><p class="sub">Sketch a shape, see the flow</p></div></div>
+            <p class="desc">Sketch CFD is an educational tool for learning computational fluid dynamics (CFD) from simple sketches: draw it, then simulate it.</p>
+            <ul class="feats"><li>See heat move the air</li><li>See gases mix</li><li>Measure it live</li><li>Photograph a paper sketch <small>(Sketch CFD Pro)</small></li></ul>
+            <p class="verified"><strong>Verified against</strong> the lid-driven cavity (Ghia, Ghia and Shin, 1982), flow around a cylinder (Schäfer and Turek, 1996) and a heated square cavity (de Vahl Davis, 1983).</p>
+            <p class="free">14 examples and a wind tunnel are free. Pro adds the rest.</p>
+            <div class="actions"><a class="btn primary" href="https://apps.apple.com/app/sketch-cfd/id6824528045">Download on the App Store</a><a class="btn" href="https://sketchcfd.journeyon.co">Sketch CFD website</a></div>
+            <a class="badge" href="#black-friday" data-sale>Black Friday: Sketch CFD Pro at half price</a>
+          </div>
+        </article>
+
+        <article class="feature flip app-fea" aria-labelledby="h-fea">
+          <figure class="media">
+            <div class="frame"><video class="sim" muted loop playsinline preload="none" poster="media/fea-sim-960.webp" width="960" height="640" aria-hidden="true" disablepictureinpicture disableremoteplayback><source src="media/fea-sim-960.mp4" type="video/mp4"></video></div>
+            <figcaption>Dog bone tensile test, one of the built-in examples: a crack runs through the bar as it is pulled. Shown at 3&times; speed.</figcaption>
+          </figure>
+          <div class="copytext">
+            <div class="title"><img src="media/fea-icon-192.webp" width="60" height="60" alt=""><div><h3 id="h-fea">Sketch FEA</h3><p class="sub">Sketch a part, see the stress</p></div></div>
+            <p class="desc">Sketch FEA is an educational tool for learning finite element analysis (FEA) and the mechanics of materials from simple sketches.</p>
+            <ul class="feats"><li>Watch a crack run through it</li><li>See how it vibrates</li><li>Find the buckling load</li><li>Compare with theory</li></ul>
+            <p class="verified"><strong>Verified against</strong> a cantilever beam (Timoshenko and Goodier, 1951), a plate with a hole (Kirsch, 1898) and Euler's column (Euler, 1744).</p>
+            <p class="free">Every example is free, and so is a steel or aluminum bar of your own; Pro adds the rest.</p>
+            <div class="actions"><a class="btn primary" href="https://apps.apple.com/app/sketch-fea/id6826964984">Download on the App Store</a><a class="btn" href="https://sketchfea.journeyon.co">Sketch FEA website</a></div>
+            <a class="badge" href="#black-friday" data-sale>Black Friday: Sketch FEA Pro at half price</a>
+          </div>
+        </article>
+
+        <article class="feature app-heat" aria-labelledby="h-heat">
+          <figure class="media">
+            <div class="frame"><video class="sim" muted loop playsinline preload="none" poster="media/heat-sim-960.webp" width="960" height="640" aria-hidden="true" disablepictureinpicture disableremoteplayback><source src="media/heat-sim-960.mp4" type="video/mp4"></video></div>
+            <figcaption>Sudden heating of a block, one of the built-in examples: heat spreads in from the heated face over time.</figcaption>
+          </figure>
+          <div class="copytext">
+            <div class="title"><img src="media/heat-icon-192.webp" width="60" height="60" alt=""><div><h3 id="h-heat">Sketch Heat</h3><p class="sub">Sketch a part, see the heat</p></div></div>
+            <p class="desc">Sketch Heat is an educational tool for learning heat transfer from simple sketches.</p>
+            <ul class="feats"><li>Watch it warm up</li><li>Walls, frames and insulation</li><li>Radiation between surfaces</li><li>Aluminum, copper, and more</li></ul>
+            <p class="verified"><strong>Verified against</strong> a plane wall, a cooling fin and a suddenly heated block (Lienhard and Lienhard, A Heat Transfer Textbook, 2024).</p>
+            <p class="free">Every example is free, and so is a plate of aluminum or copper of your own; Pro adds the rest.</p>
+            <div class="actions"><a class="btn primary" href="https://apps.apple.com/app/sketch-heat/id6831361610">Download on the App Store</a><a class="btn" href="https://sketchheat.journeyon.co">Sketch Heat website</a></div>
+            <a class="badge" href="#black-friday" data-sale>Black Friday: Sketch Heat Pro at half price</a>
+          </div>
+        </article>
+
+        <article class="feature flip app-fields" aria-labelledby="h-fields">
+          <figure class="media">
+            <div class="frame"><video class="sim" muted loop playsinline preload="none" poster="media/fields-sim-960.webp" width="960" height="640" aria-hidden="true" disablepictureinpicture disableremoteplayback><source src="media/fields-sim-960.mp4" type="video/mp4"></video></div>
+            <figcaption>Magnet and a sensor, one of the built-in examples: the magnet's flux lines and field strength, read by a sensor 5 mm above it.</figcaption>
+          </figure>
+          <div class="copytext">
+            <div class="title"><img src="media/fields-icon-192.webp" width="60" height="60" alt=""><div><h3 id="h-fields">Sketch Fields</h3><p class="sub">Sketch a part, see the field</p></div></div>
+            <p class="desc">Sketch Fields is an educational tool for learning electric and magnetic fields from simple sketches.</p>
+            <ul class="feats"><li>Flux through an electromagnet</li><li>See the field and capacitance</li><li>See current crowd at a corner</li><li>Every material, with its source</li></ul>
+            <p class="verified"><strong>Verified against</strong> a parallel-plate capacitor (Ling, Moebs and Sanny, 2016), a coaxial cable (Ellingson, 2018) and a two-wire line (Boulé, 2024).</p>
+            <p class="free">Every example is free, and so is your own capacitor; Pro adds the rest.</p>
+            <div class="actions"><a class="btn primary" href="https://apps.apple.com/app/sketch-fields/id6832425502">Download on the App Store</a><a class="btn" href="https://sketchfields.journeyon.co">Sketch Fields website</a></div>
+            <a class="badge" href="#black-friday" data-sale>Black Friday: Sketch Fields Pro at half price</a>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site">
+    <div class="wrap">
+      <div class="links">
+        <a href="https://apps.apple.com/us/developer/journey-on/id1807155063">All our apps on the App Store</a>
+        <a href="mailto:support@journeyon.co">support@journeyon.co</a>
+      </div>
+      <p>The recordings on this page are of the apps' built-in examples on iPad, only cropped and, where it says so, sped up.</p>
+      <p>Apple, iPhone and iPad are trademarks of Apple Inc., registered in the U.S. and other countries and regions. App Store is a service mark of Apple Inc.</p>
+      <p>&copy; 2026 Journey On</p>
+    </div>
+  </footer>
+</body>
+</html>
